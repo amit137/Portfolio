@@ -1,0 +1,157 @@
+:root{
+   --primary:black;
+}
+
+:root::-webkit-scrollbar{
+   width: 0.25em;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: var(--primary);
+    color: white;
+}
+.logo{
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+.nav-links{
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links a{
+    font-size: 17px;
+    color: white;
+    text-decoration: none;
+}
+.burger{
+    display: none;
+    cursor: pointer;
+}
+.burger div{
+   width: 22px;
+   height:3px;
+   margin: 3px;
+   background-color: white;
+   border-radius: 10px;
+}
+
+ @media (max-width:750px){
+     body{
+         overflow-x: hidden;
+     }
+    .nav-links{
+        position:fixed;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: black;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.7s ease-in;
+    }
+    .nav-links li{
+       
+    }
+    .burger{
+        display: block;
+    }
+
+ }
+ .nav-active{
+     transform: translateX(0%);
+ }
+
+/* main body css  */
+
+
+.introduction{
+    /* border: 2px solid green; */
+    margin: 10px;
+    box-shadow: 10px solid grey;
+}
+ .intro{
+    height: 100vh;
+    background-color: gray;
+    display: flex;
+    justify-content: space-around;
+    text-transform: uppercase;
+ }
+ .about-me{
+   flex-basis: 48%;
+   /* border: 2px solid black; */
+   display: flex;
+   flex-direction: column;
+   
+   padding: 20px;
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+ }
+ .h1-of-about-me{
+  
+   font-size: 30px;
+    
+ }
+ .about-me-btn{
+    margin-top: 20px;
+    padding:6px 40px;
+    text-transform: uppercase;
+
+ }
+ .photo-me{
+     flex-basis: 48%;
+     /* border: 2px solid black; */
+     display: flex;
+    
+ }
+ .photo{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ .photo-me img{
+  /* border: 2px solid blue; */
+  height: 80%;
+  border-radius: 10px;
+ }
+
+ @media(max-width:750px){
+     .intro{
+   
+      flex-direction: column-reverse;
+     }
+     .about-me{
+        
+     }
+     .photo-me{
+       
+        
+     }
+     .photo{
+
+         margin: auto;
+         /* border: 9px solid red; */
+         width: 90vw;
+         height: 60vh;
+         align-items:flex-end;
+     }
+     
+ }
